@@ -7,6 +7,7 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import { StyledCard, StyledAlert, StyledCircular } from './Styles'
 
+//Interfaces init
 interface Invoice {
   id: number,
   address: string,
@@ -24,11 +25,12 @@ interface State {
   errorMessage: string,
 }
 
+//global var declaration
 declare let window: any;
 let invoices: Invoice[] = JSON.parse(window.localStorage.getItem('invoices'));
 
 class Employer extends Component<Props, State> {
-  constructor(props: any) {
+  constructor(props: Props) {
     super(props);
     this.state = {
       message: '',

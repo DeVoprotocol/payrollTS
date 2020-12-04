@@ -29,7 +29,7 @@ let invoicesArr: Invoice[] = [];
 let invoiceId: number = 0;
 
 class Contractors extends Component<Props, State> {
-  constructor(props: any) {
+  constructor(props: Props) {
     super(props);
     this.state = {
       address: '',
