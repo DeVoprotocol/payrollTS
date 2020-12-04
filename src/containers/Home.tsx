@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
+//Material-UI import
 import { StyledButton } from './Styles'
 
 declare const window: any;

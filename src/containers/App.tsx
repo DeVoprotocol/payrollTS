@@ -1,6 +1,8 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import './App.css';
+//Router import
 import { BrowserRouter, } from "react-router-dom";
+//Components import
 import { AppRouter, Header } from './'
 
 class App extends Component {

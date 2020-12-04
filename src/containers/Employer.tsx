@@ -37,6 +37,7 @@ class Employer extends Component<Props, State> {
       paying: false,
       errorMessage: '',
     };
+
   }
 
   //Pay an invoice using Metamask and then setting invoice as PAID

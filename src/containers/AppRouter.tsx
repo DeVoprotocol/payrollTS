@@ -1,5 +1,7 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
+//Router import
 import { Switch, Route, } from 'react-router-dom';
+//Components import
 import { Home, Contractors, Employer } from "./"
 
 class AppRouter extends Component {
