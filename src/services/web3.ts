@@ -1,6 +1,6 @@
 import Web3 from 'web3';
 
-let window: any;
+declare let window: any;
 let web3: Web3;
 
 if (window.web3 === undefined) {

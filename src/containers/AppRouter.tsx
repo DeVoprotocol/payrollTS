@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Switch, Route, } from 'react-router-dom';
-import { Home, Contractors } from "./"
+import { Home, Contractors, Employer } from "./"
 
 class AppRouter extends Component {
 
@@ -11,6 +11,7 @@ class AppRouter extends Component {
           <Contractors />
         </Route>
         <Route path="/employer">
+          <Employer />
         </Route>
         <Route path="/">
           <Home />
