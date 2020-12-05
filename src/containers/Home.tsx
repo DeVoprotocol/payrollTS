@@ -27,7 +27,7 @@ class Home extends Component {
         <hr />
         <div>
           <StyledButton color="primary">
-            <Link to="/employer">Contractors Portal</Link>
+            <Link to="/contractors">Contractors Portal</Link>
           </StyledButton>
         </div>
         <div>
