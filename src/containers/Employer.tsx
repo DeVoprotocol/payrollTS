@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
+//Web3 import
 import { web3 } from "../services"
-import Button from '@material-ui/core/Button';
-import Chip from '@material-ui/core/Chip';
-import { Box } from '@material-ui/core';
-import CardContent from '@material-ui/core/CardContent';
-import Typography from '@material-ui/core/Typography';
-import { StyledCard, StyledAlert, StyledCircular } from './Styles'
+//Material-UI imports
+import { Box, Button, Chip, CardContent, Typography } from '@material-ui/core';
+import { StyledCard, StyledAlert, StyledCircular } from '../styles/Styles'
 
 //Interfaces init
 interface Invoice {

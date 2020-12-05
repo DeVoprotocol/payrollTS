@@ -3,7 +3,7 @@ import './App.css';
 //Router import
 import { BrowserRouter, } from "react-router-dom";
 //Components import
-import { AppRouter, Header } from './'
+import { AppRouter, Header } from 'containers'
 
 class App extends Component {
 

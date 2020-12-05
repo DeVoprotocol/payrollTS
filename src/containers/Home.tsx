@@ -1,6 +1,8 @@
 import { Component } from 'react';
+//router import
+import { Link } from 'react-router-dom';
 //Material-UI import
-import { StyledButton } from './Styles'
+import { StyledButton } from '../styles/Styles'
 
 declare const window: any;
 
@@ -24,13 +26,13 @@ class Home extends Component {
       <div>
         <hr />
         <div>
-          <StyledButton color="primary" href="/contractors">
-            Contractors Portal
+          <StyledButton color="primary">
+            <Link to="/employer">Contractors Portal</Link>
           </StyledButton>
         </div>
         <div>
-          <StyledButton color="secondary" href="/employer">
-            Employer Portal
+          <StyledButton color="secondary">
+            <Link to="/employer">Employer Portal</Link>
           </StyledButton>
         </div>
         <div>

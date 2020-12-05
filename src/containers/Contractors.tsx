@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 //Material-UI imports
-import Button from '@material-ui/core/Button';
-import { Box } from '@material-ui/core';
-import Chip from '@material-ui/core/Chip';
-import { StyledTextField, StyledAlert, StyledTextFieldMulti } from './Styles'
+import { Box, Button, Chip } from '@material-ui/core';
+import { StyledTextField, StyledAlert, StyledTextFieldMulti } from '../styles/Styles';
 
 //Interfaces init
 interface Invoice {
