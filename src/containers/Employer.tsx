@@ -69,7 +69,7 @@ class Employer extends Component<Props, State> {
         invoiceToPay.paid = true;
         window.localStorage.setItem('invoices', JSON.stringify(this.state.invoices));
         this.setState({ paying: false,
-                        message: 'Your pending transaction has been submited!',
+                        message: 'Your pending transaction has been submitted!',
                         invoices: JSON.parse(window.localStorage.getItem('invoices')),
                         lastPayment: JSON.parse(window.localStorage.getItem('lastPayment')) });
         window.localStorage.removeItem('lastPayment');
@@ -79,6 +79,17 @@ class Employer extends Component<Props, State> {
           }, 5000);
         }
         updateMessage();
+      } else {
+        this.setState({ paying: false,
+                        errorMessage: `Your pending transaction couldn't be processed`,
+                        invoices: JSON.parse(window.localStorage.getItem('invoices')), });
+        window.localStorage.removeItem('lastPayment');
+        const updateMessage = (): void => {
+          timeoutID = setTimeout(() => {
+            this.setState({ errorMessage: '' });
+          }, 5000);
+        }
+        updateMessage();    
       }
   }
 
