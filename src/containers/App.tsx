@@ -3,7 +3,7 @@ import './App.css';
 //Router import
 import { BrowserRouter, } from "react-router-dom";
 //Components import
-import { AppRouter, Header } from 'containers'
+import { AppRouter } from 'containers'
 
 class App extends Component {
 
@@ -11,7 +11,6 @@ class App extends Component {
     return (
       <div className='App'>
           <BrowserRouter>
-            <Header />
             <AppRouter />
           </BrowserRouter>
         </div>

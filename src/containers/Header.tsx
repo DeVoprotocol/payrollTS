@@ -15,13 +15,13 @@ class Header extends Component {
              justifyContent="center">
           <Breadcrumbs aria-label="breadcrumb">
             <StyledButton>
-              <Link to="/">Home</Link>
+              <Link to="/" className="link">Home</Link>
             </StyledButton>
             <StyledButton color="primary">
-              <Link to="/contractors">Contractors Portal</Link>
+              <Link to="/contractors" className="link">Contractors Portal</Link>
             </StyledButton>
             <StyledButton color="secondary">
-              <Link to="/employer">Employer Portal</Link>
+              <Link to="/employer" className="link">Employer Portal</Link>
             </StyledButton>
           </Breadcrumbs>
         </Box>

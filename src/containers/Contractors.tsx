@@ -13,7 +13,8 @@ interface Invoice {
   paid: boolean,
 }
 
-interface Props {}
+interface Props {
+}
 
 interface State {
   address: string,
@@ -26,6 +27,7 @@ interface State {
 declare let window: any;
 let invoicesArr: Invoice[] = [];
 let invoiceId: number = 0;
+let timeoutID: any;
 
 class Contractors extends Component<Props, State> {
   constructor(props: Props) {
@@ -76,12 +78,17 @@ class Contractors extends Component<Props, State> {
     });
     //remove success message function (to add delay)
     const RemoveMessageWithDelay = (): void => {
-      setTimeout((): void => {
+      timeoutID = setTimeout((): void => {
          this.setState({ message: '' });
       }, 5000);
     }
     //call the function
     RemoveMessageWithDelay();
+
+  }
+
+  componentWillUnmount() {
+    clearTimeout(timeoutID);
   }
 
   render() {

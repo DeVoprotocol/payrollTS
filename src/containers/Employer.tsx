@@ -15,17 +15,21 @@ interface Invoice {
   paid: boolean,
 }
 
-interface Props {}
+interface Props {
+}
 
 interface State {
   message: string,
   paying: boolean,
   errorMessage: string,
+  invoices: Invoice[],
+  lastPayment: any,
 }
 
 //global var declaration
 declare let window: any;
-let invoices: Invoice[] = JSON.parse(window.localStorage.getItem('invoices'));
+let timeoutID: any;
+let timeoutID2: any;
 
 class Employer extends Component<Props, State> {
   constructor(props: Props) {
@@ -34,14 +38,54 @@ class Employer extends Component<Props, State> {
       message: '',
       paying: false,
       errorMessage: '',
+      invoices: JSON.parse(window.localStorage.getItem('invoices')),
+      lastPayment: JSON.parse(window.localStorage.getItem('lastPayment')),
     };
+  }
 
+  componentWillMount() {
+     if(this.state.lastPayment !== null) {
+       this.setState({ paying: true })
+       const checkReceipt = (): void => {
+         timeoutID2 = setTimeout(() => {
+           this.checkReceipt();
+         }, 30000);
+       }
+       checkReceipt();
+     }
+  }
+
+  //This function checks if there were any pending transactions and user interrupted app.
+  checkReceipt = async () => {
+    const invoiceToPay: Invoice = this.state.invoices[this.state.lastPayment.invoiceId];
+    let receipt: any;
+    await web3.eth.getTransactionReceipt(this.state.lastPayment.hash.toString(),
+      function(error, payment) {
+        if(payment !== null) {
+          receipt = payment.status;
+        }
+      });
+    if(receipt === true) {
+        invoiceToPay.paid = true;
+        window.localStorage.setItem('invoices', JSON.stringify(this.state.invoices));
+        this.setState({ paying: false,
+                        message: 'Your pending transaction has been submited!',
+                        invoices: JSON.parse(window.localStorage.getItem('invoices')),
+                        lastPayment: JSON.parse(window.localStorage.getItem('lastPayment')) });
+        window.localStorage.removeItem('lastPayment');
+        const updateMessage = (): void => {
+          timeoutID = setTimeout(() => {
+            this.setState({ message: '' });
+          }, 5000);
+        }
+        updateMessage();
+      }
   }
 
   //Pay an invoice using Metamask and then setting invoice as PAID
   handlePay = async (id: number) => {
     //instantiate the invoice object
-    const invoiceToPay: Invoice = invoices[id];
+    const invoiceToPay: Invoice = this.state.invoices[id];
     this.setState({ paying: true, errorMessage: '', });
     //send metamask transaction
     try {
@@ -49,16 +93,21 @@ class Employer extends Component<Props, State> {
           to: invoiceToPay.address,
           from: web3.givenProvider.selectedAddress,
           value: web3.utils.toWei(invoiceToPay.amount, 'ether'),
+      }, function(error, hash){
+        //callback function to get the Metamask transaction hash (in case user interrupts app).
+        let pendingTransaction: any = { hash: hash, invoiceId: id }
+        window.localStorage.setItem('lastPayment', JSON.stringify(pendingTransaction));
       })
       //set invoice paid flag to true
       invoiceToPay.paid = true;
       //update the localStorage array
-      window.localStorage.setItem('invoices', JSON.stringify(invoices));
+      window.localStorage.setItem('invoices', JSON.stringify(this.state.invoices));
+      window.localStorage.removeItem('lastPayment');
       //set success message
       this.setState({ message: 'Invoice paid succesfully!', paying: false });
       //delay for success message to update
       const updateMessage = (): void => {
-        setTimeout(() => {
+        timeoutID = setTimeout(() => {
           this.setState({ message: '' });
         }, 5000);
       }
@@ -70,11 +119,11 @@ class Employer extends Component<Props, State> {
 
   };
 
-  //Render cards with invoices method
+  //Render cards with invoices information method
   renderInvoices() {
     return (
       <div>
-        {invoices.map(invoice => (
+        {this.state.invoices.map(invoice => (
           <StyledCard key={invoice.id}>
             <CardContent>
               <Typography color="textPrimary">
@@ -104,12 +153,17 @@ class Employer extends Component<Props, State> {
     );
   }
 
+  componentWillUnmount() {
+    clearTimeout(timeoutID);
+    clearTimeout(timeoutID2);
+  }
+
   render() {
     return (
       <div>
         <Chip label="Employer Portal" color="secondary" />
         <hr />
-        {invoices !== null ? this.renderInvoices() : <Box display="flex" alignItems="center" justifyContent="center">
+        {this.state.invoices !== null ? this.renderInvoices() : <Box display="flex" alignItems="center" justifyContent="center">
         <StyledAlert severity="warning">There are no invoices to review!</StyledAlert> </Box>}
         <br></br>
         <Box display="flex"

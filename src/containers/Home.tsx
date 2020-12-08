@@ -24,15 +24,18 @@ class Home extends Component {
   render() {
     return (
       <div>
+        <StyledButton>
+          <Link to="/" className="link">Home</Link>
+        </StyledButton>
         <hr />
         <div>
           <StyledButton color="primary">
-            <Link to="/contractors">Contractors Portal</Link>
+            <Link to="/contractors" className="link">Contractors Portal</Link>
           </StyledButton>
         </div>
         <div>
           <StyledButton color="secondary">
-            <Link to="/employer">Employer Portal</Link>
+            <Link to="/employer" className="link">Employer Portal</Link>
           </StyledButton>
         </div>
         <div>
