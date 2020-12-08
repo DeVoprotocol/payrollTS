@@ -81,15 +81,14 @@ class Employer extends Component<Props, State> {
         updateMessage();
       } else {
         this.setState({ paying: false,
-                        errorMessage: `Your pending transaction couldn't be processed`,
-                        invoices: JSON.parse(window.localStorage.getItem('invoices')), });
+                        errorMessage: `Your pending transaction couldn't be processed`, });
         window.localStorage.removeItem('lastPayment');
         const updateMessage = (): void => {
           timeoutID = setTimeout(() => {
             this.setState({ errorMessage: '' });
           }, 5000);
         }
-        updateMessage();    
+        updateMessage();
       }
   }
 
@@ -186,7 +185,7 @@ class Employer extends Component<Props, State> {
               <StyledCircular color="secondary" />
               <Typography>Processing payment...</Typography>
               <div>
-                <Typography variant="caption" color="textSecondary">(Please do not refresh your browser)</Typography>
+                <Typography variant="caption" color="textSecondary">(Please do not refresh or close your browser window.)</Typography>
               </div>
             </div> }
           {this.state.errorMessage !== '' ? <StyledAlert severity="error">{this.state.errorMessage}</StyledAlert> : null}
