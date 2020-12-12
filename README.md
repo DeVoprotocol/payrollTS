@@ -35,7 +35,9 @@ This app let's you add invoices (as a Contractor) to your browser's LocalStorage
 
 ### Running
 
-After downloading the code and getting the modules you just need to: npm start, to run the app.
+1. git clone https://github.com/nestorbe/payrollTS.git
+2. yarn
+3. yarn start
 
 ### Time-Frame
 
