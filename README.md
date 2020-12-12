@@ -1,46 +1,55 @@
-# Getting Started with Create React App
+# Payroll - Metamask App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+You can use the current code version here: [Payroll-Metamask](https://payroll-metamask.herokuapp.com/).
 
-## Available Scripts
+## Personal Intro
 
-In the project directory, you can run:
+My name is Nestor Barboza, and I am currently a freelance Web Developer. I have been working as a developer for the past three years. I have always been engaged in Technology/Computer Science since I have use of memory. 
 
-### `npm start`
+I started from my early childhood to assemble and troubleshoot hardware, then learning how to get the most out of any software to finally writing my own code. Throughout my life, I’ve been fascinated with the quick and clever technologies that I’ve seen develop, since the early days of the internet, web, email going to what we have today, blockchain technology in particular has really catched my attention in the recent years, because I think it will have a profound impact on our future once it’s fully developed.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Aside from technology, of course, I have other things that I love, playing/watching sports, esports is one of my favorites, I love to compete and always give the best out of me in everything I do, swimming is one of my favorites sports activities and also I love to cook some tasty dishes.
+You can contact me via email: nestorbarboza@gmail.com.
+ 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+#### Links to my social media:
 
-### `npm test`
+[Github](https://github.com/nestorbe) |
+[Twitter](https://twitter.com/nestorbe)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### List of learning resources:
 
-### `npm run build`
+- [CryptoZombies](https://cryptozombies.io/) - Interactive school that teaches you all things technical about blockchains.
+- [Ethernaut](https://ethernaut.openzeppelin.com/) - Web3/Solidity based wargame inspired on overthewire.org, played in the Ethereum Virtual Machine. 
+- [Ludu](https://www.ludu.co/course/ethereum/what-is-ethereum) - Discover ethereum and solidity course.
+- [Udemy](https://www.udemy.com/course/ethereum-and-solidity-the-complete-developers-guide/) - Ethereum and Solidity: The Complete Developer's Guide
+- [willitscale](https://github.com/willitscale/learning-solidity) - Learning Solidity
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Why do I want to join dOrg?
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+I really believe in the value of teamwork, when I saw I had the opportunity to join a team of "Decentralized Developers", I knew this was what I wanted to do with my future, help by putting my grain of sand into the development of the blockchain technology.  I believe strongly in working with other people towards a common goal and I know the skills I bring not only as a Developer, but as a team member will not only bring me work satisfaction, but will make me a valuable teammate as well.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Description
 
-### `npm run eject`
+This app let's you add invoices (as a Contractor) to your browser's LocalStorage (used LocalStorage for simplicity purposes), and then use the Employer's Portal to pay the different invoices that were submitted, by using your metamask accounts.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Running
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+After downloading the code and getting the modules you just need to: npm start, to run the app.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Time-Frame
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+10 hours.
 
-## Learn More
+### Components
+[Contractors](/src/containers/Contractors.tsx) - Simple component that handles every invoice that is going to be submitted to the app.  
+[Employer](/src/containers/Employer.tsx) - Component that handles the payment of each invoice submitted by a contractor.
+ 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Notes
+This project is still in development, here are some things I would like to add in the future:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- User registration.
+- Better design for the homepage with graphics and explanation of the app.
+- Add a 'history' for paid invoices.
+- Use another option different than localStorage to store the data.
