@@ -19,7 +19,7 @@ Links to my social media:
 
 ## Description
 
-This app let's you add invoices (as a Contractor) to your browser's LocalStorage and then use the Employer's Portal to pay the different invoices that were submitted, by using your metamask accounts.
+This app let's you add invoices (as a Contractor) to your browser's LocalStorage (used LocalStorage for simplicity purposes), and then use the Employer's Portal to pay the different invoices that were submitted, by using your metamask accounts.
 
 ### Running
 
