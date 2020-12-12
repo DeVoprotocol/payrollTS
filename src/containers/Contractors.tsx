@@ -56,12 +56,13 @@ class Contractors extends Component<Props, State> {
     //we first update the array
     this.updateInvoices();
     //create a variable of type Invoice
+    const { address, date, amount, reason } = this.state;
     const invoice: Invoice = {
       id: invoiceId,
-      address: this.state.address,
-      date: this.state.date,
-      amount: this.state.amount,
-      reason: this.state.reason,
+      address,
+      date,
+      amount,
+      reason,
       paid: false,
     }
     //push the invoice to our array
