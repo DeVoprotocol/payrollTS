@@ -34,10 +34,15 @@ I really believe in the value of teamwork, when I saw I had the opportunity to j
 This app let's you add invoices (as a Contractor) to your browser's LocalStorage (used LocalStorage for simplicity purposes), and then use the Employer's Portal to pay the different invoices that were submitted, by using your metamask accounts.
 
 ### Running
-
+```
 1. git clone https://github.com/nestorbe/payrollTS.git
+```
+```
 2. yarn
+```
+```
 3. yarn start
+```
 
 ### Time-Frame
 
