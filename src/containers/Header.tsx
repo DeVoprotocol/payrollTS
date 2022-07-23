@@ -19,7 +19,7 @@ class Header extends Component {
           </div>
           <div className="h-10">
             <input
-              placeholder="Anonymous Web Services"
+              placeholder="Search for Projects"
               className="bg-blue-100 rounded-full h-full focus:outline-none ml-2 px-3 pr-4"
             />
           </div>
