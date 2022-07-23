@@ -12,4 +12,5 @@ export {
   Header,
   Contractors,
   Employer,
+  Footer,
 }
