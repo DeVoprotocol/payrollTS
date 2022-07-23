@@ -8,7 +8,6 @@ import { StyledButton } from '../styles/Styles'
 class Footer extends Component {
 	render() {
 return ( 
-	<>
   <footer>
           <div className="fixed-bottom">
             <div className="col-md-12">
