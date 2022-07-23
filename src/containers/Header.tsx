@@ -18,10 +18,10 @@ class Header extends Component {
               <Link to="/" className="link">Home</Link>
             </StyledButton>
             <StyledButton color="primary">
-              <Link to="/contractors" className="link">Contractors Portal</Link>
+              <Link to="/contractors" className="link">Issue Bounties</Link>
             </StyledButton>
             <StyledButton color="secondary">
-              <Link to="/employer" className="link">Employer Portal</Link>
+              <Link to="/employer" className="link">Reward Volunteers</Link>
             </StyledButton>
           </Breadcrumbs>
         </Box>
