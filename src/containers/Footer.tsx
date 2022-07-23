@@ -7,7 +7,7 @@ import { StyledButton } from '../styles/Styles'
 
 class Footer extends Component {
 	render()
-return (
+return (	<div>
 		<footer className="flex-none bg-gray-700" style={{ width, height }}>
 			<h1 className="text-center text-sm text-gray-50 py-2 align-baseline">
 				Powered by{" "}
@@ -17,6 +17,7 @@ return (
 				<span className="mx-6 text-sm">&copy; 2021</span>
 			</h1>
 		</footer>
+		</div>
 	);
 };
 
