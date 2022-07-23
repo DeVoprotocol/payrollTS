@@ -19,9 +19,11 @@ class AppRouter extends Component {
         </Route>
         <Route path="/">
           <Home />
-          <Footer />
         </Route>
+ <Footer />
+
       </Switch>
+      
     );
   }
 }
