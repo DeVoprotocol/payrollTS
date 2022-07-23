@@ -1,6 +1,13 @@
+import React, { Component } from 'react';
+//router import
+import { Link } from 'react-router-dom';
+//Material-UI imports
+import { Box, Breadcrumbs } from '@material-ui/core'
+import { StyledButton } from '../styles/Styles'
 
-const Footer = ({ height, width }) => {
-	return (
+class Footer extends Component {
+	render()
+return (
 		<footer className="flex-none bg-gray-700" style={{ width, height }}>
 			<h1 className="text-center text-sm text-gray-50 py-2 align-baseline">
 				Powered by{" "}
