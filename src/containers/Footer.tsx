@@ -17,7 +17,7 @@ return (
                     <a href="">ContactUs</a>
                 </li>
                 <li>
-                    © Microsoft {new Date().getFullYear()}
+                    DeVo {new Date().getFullYear()}
                 </li>
               </ul>
             </div>
