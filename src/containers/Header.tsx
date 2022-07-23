@@ -10,17 +10,21 @@ class Header extends Component {
   render() {
     return (
       <div>
-         <div className="col-span-2 flex items-center">
+              <div className="col-span-2 flex items-center">
         <div className="flex items-center ml-2">
           <div className="h-10 text-primary">
             <Link to="/">
-              <i className="fab fa-aws" style={{ fontSize: 30 }}></i>    
               <img src="https://devoprotocol.org/images/DeVo_logo.svg" />
-
             </Link>
-          </div> 
-           </div>
+          </div>
+          <div className="h-10">
+            <input
+              placeholder="Anonymous Web Services"
+              className="bg-blue-100 rounded-full h-full focus:outline-none ml-2 px-3 pr-4"
+            />
+          </div>
         </div>
+      </div>
         <Box display="flex"
              alignItems="center"
              justifyContent="center">
