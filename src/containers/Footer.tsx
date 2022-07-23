@@ -7,17 +7,22 @@ import { StyledButton } from '../styles/Styles'
 
 class Footer extends Component {
 	render()
-return (	<div>
-		<footer className="flex-none bg-gray-700" style={{ width, height }}>
-			<h1 className="text-center text-sm text-gray-50 py-2 align-baseline">
-				Powered by{" "}
-				<a href="https://github.com/tarique1988" className="font-bold">
-					Tarique
-				</a>{" "}
-				<span className="mx-6 text-sm">&copy; 2021</span>
-			</h1>
-		</footer>
-		</div>
+return (	<footer>
+        <div className="container-fluid footer">
+          <div className="row">
+            <div className="col-md-12">
+              <ul className="pull-right list-unstyled">
+                <li>
+                    <a href="">{Resources.Footer.ContactUs}</a>
+                </li>
+                <li>
+                    © Microsoft {new Date().getFullYear()}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
 	);
 };
 
