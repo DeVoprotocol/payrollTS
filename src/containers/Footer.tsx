@@ -6,14 +6,15 @@ import { Box, Breadcrumbs } from '@material-ui/core'
 import { StyledButton } from '../styles/Styles'
 
 class Footer extends Component {
-	render()
-return (	<footer>
+	render() {
+return ( 
+  <footer>
         <div className="container-fluid footer">
           <div className="row">
             <div className="col-md-12">
               <ul className="pull-right list-unstyled">
                 <li>
-                    <a href="">{Resources.Footer.ContactUs}</a>
+                    <a href="">ContactUs</a>
                 </li>
                 <li>
                     © Microsoft {new Date().getFullYear()}
@@ -24,6 +25,7 @@ return (	<footer>
         </div>
       </footer>
 	);
+};
 };
 
 export default Footer;
