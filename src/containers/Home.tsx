@@ -30,12 +30,12 @@ class Home extends Component {
         <hr />
         <div>
           <StyledButton color="primary">
-            <Link to="/contractors" className="link">Contractors Portal</Link>
+            <Link to="/contractors" className="link">Bounties Portal</Link>
           </StyledButton>
         </div>
         <div>
           <StyledButton color="secondary">
-            <Link to="/employer" className="link">Employer Portal</Link>
+            <Link to="/employer" className="link">Volunteer Portal</Link>
           </StyledButton>
         </div>
         <div>
