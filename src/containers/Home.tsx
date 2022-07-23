@@ -25,17 +25,22 @@ class Home extends Component {
     return (
       <div>
         <StyledButton>
-          <Link to="/" className="link">Home</Link>
+          <Link to="/" className="link">Dashboard</Link>
         </StyledButton>
         <hr />
         <div>
           <StyledButton color="primary">
-            <Link to="/contractors" className="link">Bounties Portal</Link>
+            <Link to="/contractors" className="link">Bounties</Link>
           </StyledButton>
         </div>
         <div>
           <StyledButton color="secondary">
-            <Link to="/employer" className="link">Volunteer Portal</Link>
+            <Link to="/employer" className="link">Volunteer</Link>
+          </StyledButton>
+        </div>
+        <div>
+          <StyledButton color="secondary">
+            <Link to="/employer" className="link">Create Project</Link>
           </StyledButton>
         </div>
         <div>
