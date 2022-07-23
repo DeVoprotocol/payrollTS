@@ -97,7 +97,7 @@ class Contractors extends Component<Props, State> {
       <div>
         <Chip label="Contractors Portal" color="primary" />
         <hr />
-          <h1><Chip label="Submit new invoice" variant="outlined" color="secondary" size="small" /></h1>
+          <h1><Chip label="Submit new bounty" variant="outlined" color="secondary" size="small" /></h1>
           <div>
             <div>
               <input
@@ -120,7 +120,7 @@ class Contractors extends Component<Props, State> {
                 id="standard-basic"
                 label="Invoice amount:"
                 type="number"
-                placeholder="amount in ether"
+                placeholder="amount in ether/DEVO"
                 value={this.state.amount}
                 onChange={event => this.setState({ amount: event.target.value})}
                 />
@@ -128,7 +128,7 @@ class Contractors extends Component<Props, State> {
             <div>
               <StyledTextFieldMulti
                 id="standard-multiline-static"
-                label="Reason:"
+                label="Hours:"
                 multiline
                 rows={4}
                 variant="outlined"
