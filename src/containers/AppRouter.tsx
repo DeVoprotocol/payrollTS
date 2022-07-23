@@ -2,7 +2,7 @@ import { Component } from 'react';
 //Router import
 import { Switch, Route, } from 'react-router-dom';
 //Components import
-import { Home, Contractors, Employer, Header } from "containers"
+import { Home, Contractors, Employer, Header, Footer } from "containers"
 
 class AppRouter extends Component {
 
@@ -19,6 +19,7 @@ class AppRouter extends Component {
         </Route>
         <Route path="/">
           <Home />
+          <Footer />
         </Route>
       </Switch>
     );
