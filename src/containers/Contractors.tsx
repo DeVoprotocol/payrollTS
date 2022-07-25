@@ -97,7 +97,7 @@ class Contractors extends Component<Props, State> {
       <div>
         <Chip label="Contractors Portal" color="primary" />
         <hr />
-          <h1><Chip label="Submit new bounty" variant="outlined" color="secondary" size="small" /></h1>
+          <h1><Chip label="Submit new reward" variant="outlined" color="secondary" size="small" /></h1>
           <div>
             <div>
               <input
