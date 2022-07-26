@@ -91,7 +91,6 @@ class Contractors extends Component<Props, State> {
   componentWillUnmount() {
     clearTimeout(timeoutID);
   }
-const iframe = '<iframe src="https://tiffinger-thiel-gmbh.github.io/clockify-overtime" width="540" height="450"></iframe>'; 
 
   render() {
     return (
@@ -138,13 +137,15 @@ const iframe = '<iframe src="https://tiffinger-thiel-gmbh.github.io/clockify-ove
               />
             </div>
           </div>
-
+          <div>
             <br></br>
             <Button variant="contained" color="primary" onClick={this.sendInvoice}>
               Submit
             </Button>
           </div>
-      
+        <div><iframe>
+          https://tiffinger-thiel-gmbh.github.io/clockify-overtime/
+          </iframe></div>
         <br></br>
         <Box display="flex"
              alignItems="center"
